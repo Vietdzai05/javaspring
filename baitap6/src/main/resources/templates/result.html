@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="_layout">
+<head>
+    <title>Kết quả</title>
+</head>
+<body>
+<div th:fragment="content">
+    <div class="success-msg" th:text="${message}"></div>
+
+    <h3>📋 Thông tin Nhân viên:</h3>
+    <ul>
+        <li><strong>ID:</strong> <span th:text="${employee.id}"></span></li>
+        <li><strong>Tên:</strong> <span th:text="${employee.name}"></span></li>
+        <li><strong>Email:</strong> <span th:text="${employee.email}"></span></li>
+        <li><strong>Vị trí:</strong> <span th:text="${employee.position}"></span></li>
+    </ul>
+
+    <a th:href="@{/employees/list}" class="btn btn-add">↩️ Quay lại danh sách</a>
+</div>
+</body>
+</html>
